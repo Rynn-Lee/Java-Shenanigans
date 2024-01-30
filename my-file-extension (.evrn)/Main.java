@@ -6,9 +6,11 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Main{
+    static String placeholder = "I just wanted to test if this would work, and it kinda does!\nIt's so cool. Probably in the future i'll develop this file extension further and will use it in my programs!";
+
     public static void main(String[] args) {
         createFile("everrynn");
-        writeToFile("everrynn.evrn", "Some kind of encrypted text");
+        writeToFile("everrynn.evrn", placeholder);
         readFile("everrynn.evrn");
     }
     static void createFile(String name){
@@ -20,7 +22,7 @@ public class Main{
                 System.out.println("The file already exist");
             }
         } catch (IOException e){
-            System.out.println("An error occured!");
+            System.out.println("An error occurred!");
         }
     }
     static void writeToFile(String filename, String text){
@@ -34,7 +36,7 @@ public class Main{
             writer.write(arrayString);
             writer.close();
         } catch (IOException e) {
-            System.out.println("An error occured!");
+            System.out.println("An error occurred!");
         }
     }
 
@@ -47,7 +49,7 @@ public class Main{
                 System.out.println("Decrypted: "+ decrypt(nextLine));
             }
         } catch (IOException e){
-            System.out.println("An error occured!");
+            System.out.println("An error occurred!");
         }
     }
     static String decrypt(String text){
